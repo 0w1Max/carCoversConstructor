@@ -6,3 +6,11 @@
 ////  2.3. Написать функцию-конструктор для создания объекта со всеми значениями
 ////  2.4. Добавить события для вывода значений в разметке
 //  2. Сделать итоговую разметку
+
+const selectMaterial = document.querySelector('.select-item__material');
+const selectMaterialOptions = selectMaterial.querySelector('option');
+const selectColor = document.querySelector('.select-item__color');
+const selectColorOptions = selectColor.querySelector('option');
+
+const materialText = document.querySelector('.add-cover-text__material');
+const colorText = document.querySelector('.add-cover-text__color');
