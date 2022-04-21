@@ -1,21 +1,21 @@
-function getArray (selector) {
-    const arr = [];
+function getValuesArray (selector) {
+    const newArr = [];
     
     const arrayOptions = document.querySelectorAll(selector);
    
-    arrayOptions.forEach((option) => arr.push(option.value));
+    arrayOptions.forEach((option) => newArr.push(option.value));
     
-    return arr;
+    return newArr;
   }
 
-  function getArrayTextContent (selector) {
-    const arr= [];
+  function getTextContentArray (selector) {
+    const newArr= [];
     
     const arrayOptions = document.querySelectorAll(selector);
     
-    arrayOptions.forEach((option) => arr.push(option.textContent));
+    arrayOptions.forEach((option) => newArr.push(option.textContent));
     
-    return arr;
+    return newArr;
   }
 
 function getObj (valuesArr, textArr) {
@@ -28,4 +28,4 @@ function getObj (valuesArr, textArr) {
     return newObj;
   }
 
-  export {getArray, getArrayTextContent, getObj};
+  export {getValuesArray, getTextContentArray, getObj};

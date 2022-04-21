@@ -7,7 +7,7 @@
 ////  +2.4. Добавить события для вывода значений в разметке
 //  2. Сделать итоговую разметку
 
-import {getArray, getArrayTextContent, getObj} from "./util.js";
+import {getValuesArray, getTextContentArray, getObj} from "./util.js";
 
 const selectMaterial = document.querySelector('.select-item__material');
 const selectMaterialOptions = selectMaterial.querySelector('option');
@@ -17,13 +17,13 @@ const selectColorOptions = selectColor.querySelector('option');
 const materialText = document.querySelector('.add-cover-text__material');
 const colorText = document.querySelector('.add-cover-text__color');
 
-const materials = getArray('.select-item__material option');
-const colors = getArray('.select-item__color option');
+const materials = getValuesArray('.select-item__material option');
+const colors = getValuesArray('.select-item__color option');
 console.log(materials);
 console.log(colors);
 
-const materialsTextContent = getArrayTextContent('.select-item__material option');
-const colorsTextContent = getArrayTextContent('.select-item__color option');
+const materialsTextContent = getTextContentArray('.select-item__material option');
+const colorsTextContent = getTextContentArray('.select-item__color option');
 console.log(materialsTextContent);
 console.log(colorsTextContent);
 
