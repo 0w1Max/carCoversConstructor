@@ -79,3 +79,32 @@ const materialsObj = getObj(materials, materialsTextContent);
 const colorsObj = getObj(colors, colorsTextContent);
 console.log(materialsObj);
 console.log(colorsObj);
+
+function carCover (materials, colors) {
+  this.materials = materials;
+  this.colors = colors;
+}
+
+const newCarCover = new carCover(materialsObj, colorsObj);
+console.log(newCarCover);
+
+if (selectMaterialOptions) {
+  materialText.textContent = newCarCover.materials[selectMaterialOptions.value];
+}
+
+if (selectColorOptions) {
+  colorText.textContent = newCarCover.colors[selectColorOptions.value];
+}
+
+function materialChangeHandler (evt) {
+  materialText.textContent = newCarCover.materials[evt.target.value];
+  console.log(evt.target.value);
+}
+
+function colorChangeHandler (evt) {
+  colorText.textContent = newCarCover.colors[evt.target.value];
+}
+
+selectMaterial.addEventListener('change', materialChangeHandler);
+
+selectColor.addEventListener('change', colorChangeHandler);
