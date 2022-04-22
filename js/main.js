@@ -1,37 +1,21 @@
-import {getValuesArray, getTextContentArray, getObj} from './util.js';
 import './rendering.js';
+import {MATERIALS, COLORS, HEX_COLORS} from './mock.js';
 
 const selectMaterial = document.querySelector('.select-item__material');
 const selectMaterialOptions = selectMaterial.querySelector('option');
 const selectColor = document.querySelector('.select-item__color');
 const selectColorOptions = selectColor.querySelector('option');
-
 const materialText = document.querySelector('.add-cover-text__material');
 const colorText = document.querySelector('.add-cover-text__color');
-
 const showColor = document.querySelector('.show-color');
 
-const materials = getValuesArray('.select-item__material option');
-const colors = getValuesArray('.select-item__color option');
-console.log(materials);
-console.log(colors);
-
-const materialsTextContent = getTextContentArray('.select-item__material option');
-const colorsTextContent = getTextContentArray('.select-item__color option');
-console.log(materialsTextContent);
-console.log(colorsTextContent);
-
-const materialsObj = getObj(materials, materialsTextContent);
-const colorsObj = getObj(colors, colorsTextContent);
-console.log(materialsObj);
-console.log(colorsObj);
-
-function carCover (materials, colors) {
+function carCover (materials, colors, hex) {
   this.materials = materials;
   this.colors = colors;
+  this.hex = hex;
 }
 
-const newCarCover = new carCover(materialsObj, colorsObj);
+const newCarCover = new carCover(MATERIALS, COLORS, HEX_COLORS);
 console.log(newCarCover);
 
 if (selectMaterialOptions) {
@@ -40,7 +24,7 @@ if (selectMaterialOptions) {
 
 if (selectColorOptions) {
   colorText.textContent = newCarCover.colors[selectColorOptions.value];
-  showColor.style.background = 'orange';
+  showColor.style.background = newCarCover.hex[selectColorOptions.value];
 }
 
 function materialChangeHandler (evt) {
@@ -49,6 +33,7 @@ function materialChangeHandler (evt) {
 
 function colorChangeHandler (evt) {
   colorText.textContent = newCarCover.colors[evt.target.value];
+  showColor.style.background = newCarCover.hex[evt.target.value];
 }
 
 selectMaterial.addEventListener('change', materialChangeHandler);

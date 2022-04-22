@@ -10,11 +10,11 @@ const COLORS = {
 
 const HEX_COLORS = {
     'black': '#000',
-    'blue': 'Синий',
-    'gray': 'Серый',
-    'green': 'Зелёный',
-    'orange': 'Оранжевый',
-    'red': 'Красный',
+    'blue': 'blue',
+    'gray': 'gray',
+    'green': 'green',
+    'orange': 'orange',
+    'red': 'red',
     'white': '#fff'
 };
 
