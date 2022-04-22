@@ -1,31 +1,31 @@
-function getValuesArray (selector) {
-    const newArr = [];
+// function getValuesArray (selector) {
+//     const newArr = [];
     
-    const arrayOptions = document.querySelectorAll(selector);
+//     const arrayOptions = document.querySelectorAll(selector);
    
-    arrayOptions.forEach((option) => newArr.push(option.value));
+//     arrayOptions.forEach((option) => newArr.push(option.value));
     
-    return newArr;
-  }
+//     return newArr;
+//   }
 
-  function getTextContentArray (selector) {
-    const newArr= [];
+//   function getTextContentArray (selector) {
+//     const newArr= [];
     
-    const arrayOptions = document.querySelectorAll(selector);
+//     const arrayOptions = document.querySelectorAll(selector);
     
-    arrayOptions.forEach((option) => newArr.push(option.textContent));
+//     arrayOptions.forEach((option) => newArr.push(option.textContent));
     
-    return newArr;
-  }
+//     return newArr;
+//   }
 
-function getObj (valuesArr, textArr) {
-    const newObj = {}
+// function getObj (valuesArr, textArr) {
+//     const newObj = {}
     
-    for (let i = 0; i < valuesArr.length; i++) {
-      newObj[valuesArr[i]] = textArr[i]
-    }
+//     for (let i = 0; i < valuesArr.length; i++) {
+//       newObj[valuesArr[i]] = textArr[i]
+//     }
     
-    return newObj;
-  }
+//     return newObj;
+//   }
 
-  export {getValuesArray, getTextContentArray, getObj};
+//   export {getValuesArray, getTextContentArray, getObj};
