@@ -16,6 +16,17 @@ const coverTemplate = document.querySelector('#cover-template').content;
 const fragment = document.createDocumentFragment();
 const cloneTemplate = coverTemplate.cloneNode(true);
 
+function getMock (select, option, obj) {
+  for (let key in obj) {
+    const newOption = option.cloneNode(true);
+
+    newOption.value = key;
+    newOption.textContent = obj[key];
+    
+    select.appendChild(newOption);
+  }
+}
+
 function renderTemplate () {
   const selectColor = cloneTemplate.querySelector('.select-item__color');
   const optionColor = selectColor.querySelector('option');
@@ -25,23 +36,8 @@ function renderTemplate () {
   selectColor.innerHTML = '';
   selectMaterial.innerHTML = '';
   
-  for (let key in COLORS) {
-    const color = optionColor.cloneNode(true);
-
-    color.value = key;
-    color.textContent = COLORS[key];
-    
-    selectColor.appendChild(color);
-  }
-
-  for (let key in MATERIALS) {
-    const material = optionMaterial.cloneNode(true);
-
-    material.value = key;
-    material.textContent = MATERIALS[key];
-    
-    selectMaterial.appendChild(material);
-  }
+  getMock(selectColor, optionColor, COLORS);
+  getMock(selectMaterial, optionMaterial, MATERIALS);
 
   fragment.appendChild(cloneTemplate);
   body.appendChild(fragment);
