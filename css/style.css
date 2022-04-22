@@ -9,3 +9,16 @@ body {
     background: #000;
     border-radius: 50%;
 }
+
+.cover-img {
+    position: relative;
+}
+
+.cover-main {
+    position: absolute;
+}
+
+.cover-color {
+    top: 55px;
+    left: 43px;
+}
