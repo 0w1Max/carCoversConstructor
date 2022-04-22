@@ -1,5 +1,5 @@
 import {getValuesArray, getTextContentArray, getObj} from './util.js';
-import {renderTemplate} from './rendering.js';
+import './rendering.js';
 
 // const selectMaterial = document.querySelector('.select-item__material');
 // const selectMaterialOptions = selectMaterial.querySelector('option');
@@ -10,8 +10,6 @@ import {renderTemplate} from './rendering.js';
 // const colorText = document.querySelector('.add-cover-text__color');
 
 // const showColor = document.querySelector('.show-color');
-
-renderTemplate();
 
 // const materials = getValuesArray('.select-item__material option');
 // const colors = getValuesArray('.select-item__color option');

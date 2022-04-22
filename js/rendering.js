@@ -32,5 +32,5 @@ function getMock (select, option, obj) {
     body.appendChild(fragment);
   }
 
-  export {renderTemplate};
+  renderTemplate();
   
