@@ -51,23 +51,23 @@ function materialChangeHandler (evt) {
 }
 
 function mainColorChangeHandler (evt) {
-  mainColorText.textContent = newCarCover.colors[mainColorOptions.value];
-  showMainColor.style.background = newCarCover.hex[mainColorOptions.value];
-  coverMainColor.src = `./img/cover-main--${mainColorOptions.value}.png`;
-  coverMainColor.className = `cover-img main-color main-color--${mainColorOptions.value}`;
-  coverMainColor.alt = `main-color--${mainColorOptions.value}`;
+  mainColorText.textContent = newCarCover.colors[evt.target.value];
+  showMainColor.style.background = newCarCover.hex[evt.target.value];
+  coverMainColor.src = `./img/cover-main--${evt.target.value}.png`;
+  coverMainColor.className = `cover-img main-color main-color--${evt.target.value}`;
+  coverMainColor.alt = `main-color--${evt.target.value}`;
 }
 
 function topColorChangeHandler (evt) {
-  topColorText.textContent = newCarCover.colors[topColorOptions.value];
-  showTopColor.style.background = newCarCover.hex[topColorOptions.value];
-  coverTopColor.src = `./img/cover-top--${topColorOptions.value}.png`;
-  coverTopColor.className = `cover-img top-color top-color--${topColorOptions.value}`;
-  coverTopColor.alt = `top-color--${topColorOptions.value}`;
+  topColorText.textContent = newCarCover.colors[evt.target.value];
+  showTopColor.style.background = newCarCover.hex[evt.target.value];
+  coverTopColor.src = `./img/cover-top--${evt.target.value}.png`;
+  coverTopColor.className = `cover-img top-color top-color--${evt.target.value}`;
+  coverTopColor.alt = `top-color--${evt.target.value}`;
 }
 
 selectMaterial.addEventListener('change', materialChangeHandler);
 
 selectMainColor.addEventListener('change', mainColorChangeHandler);
 
-selectMainColor.addEventListener('change', topColorChangeHandler);
+selectTopColor.addEventListener('change', topColorChangeHandler);
