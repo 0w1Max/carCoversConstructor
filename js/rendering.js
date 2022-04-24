@@ -17,15 +17,19 @@ function getMock (select, option, obj) {
   }
   
   function renderTemplate () {
-    const selectColor = cloneTemplate.querySelector('.select-item__color');
-    const optionColor = selectColor.querySelector('option');
+    const selectMainColor = cloneTemplate.querySelector('.select-item__main-color');
+    const mainColor = selectMainColor.querySelector('option');
+    const selectTopColor = cloneTemplate.querySelector('.select-item__top-color');
+    const topColor = selectTopColor.querySelector('option');
     const selectMaterial = cloneTemplate.querySelector('.select-item__material');
     const optionMaterial = selectMaterial.querySelector('option');
     
-    selectColor.innerHTML = '';
+    selectMainColor.innerHTML = '';
+    selectTopColor.innerHTML = '';
     selectMaterial.innerHTML = '';
     
-    getMock(selectColor, optionColor, COLORS);
+    getMock(selectMainColor, mainColor, COLORS);
+    getMock(selectTopColor, topColor, COLORS);
     getMock(selectMaterial, optionMaterial, MATERIALS);
   
     fragment.appendChild(cloneTemplate);

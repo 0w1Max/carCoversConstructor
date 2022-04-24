@@ -10,15 +10,20 @@ body {
     border-radius: 50%;
 }
 
-.cover-img {
+.cover-img-container {
     position: relative;
 }
 
-.cover-main {
+.cover-img {
     position: absolute;
 }
 
-.cover-color {
+.main-color {
     top: 55px;
     left: 43px;
+}
+
+.top-color {
+    top: 7px;
+    left: 58px;
 }

@@ -11,18 +11,24 @@
     <select class="select-item select-item__material" name="change-material">
       <option></option>
     </select>
-    <select class="select-item select-item__color" name="change-color">
+    <select class="select-item select-item__main-color" name="change-color">
       <option></option>
     </select>
-    <div class="show-color"></div>
+    <div class="show-color show-color--main"></div>
+    <select class="select-item select-item__top-color" name="change-color">
+      <option></option>
+    </select>
+    <div class="show-color show-color--top"></div>
     
     <h1>Вы выбрали чехол:</h1>
     <h2>Материал</h2><p class="add-cover-text add-cover-text__material"></p>
-    <h2>Цвет</h2><p class="add-cover-text add-cover-text__color"></p>
+    <h2>Основной цвет</h2><p class="add-cover-text add-cover-text__main-color"></p>
+    <h2>Цвет подголовника</h2><p class="add-cover-text add-cover-text__top-color"></p>
 
-    <div class="cover-img">
-      <img class="cover-main" src="./img/cover-main.png" alt="cover-main">
-      <img class="cover-main cover-color" src="./img/cover-main--black.png" alt="cover-main--black">
+    <div class="cover-img-container">
+      <img class="cover-img" src="./img/cover-main.png" alt="cover-main">
+      <img class="cover-img main-color" src="./img/cover-main--black.png" alt="cover-main--black">
+      <img class="cover-img top-color" src="./img/cover-top--black.png" alt="cover-top--black">
     </div>
   </template>
 
